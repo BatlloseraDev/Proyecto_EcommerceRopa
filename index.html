@@ -6,17 +6,18 @@
     <title>Inicio sesion</title>
     <link rel="stylesheet" href="styles/Style.css">
 </head>
-<body>
-    <body>
-        <div class="formulario">       
-            <form class="login-form">
-                <input type="text" placeholder="Nombre de usuario" required>
-                <input type="email" placeholder="Correo electronico" required>
-                <input type="password" placeholder="Contraseña" required>.
-                <a href="#" class="forgot-password">¿Has olvidado tu contraseña?</a>  
-                <button type="submit">Iniciar Sesion</button>          
-            </div>
-        </div>
-    <!--Index es el inicio de sesion.-->
+<body class="login">
+     <!--Index es el inicio de sesion.-->
+    <div class="container_login">    
+        <div class="heading-login">Inicio Sesion</div>   
+        <form action="" class="login-form">
+            <input type="email" class="input_login" name="email" id="email" placeholder="Correo electronico" required="">
+            <input type="password" class="input_login" name="password" id="password" placeholder="Contraseña" required="">.
+            <span class="forgot-password"><a href="#" >¿Has olvidado tu contraseña?</a></span>  
+            <input class="login-button" type="submit" value="Iniciar sesión">
+        </form>
+        <button class="signup-button" href="#"><a>Registrarme</a></button>    
+    </div>
+   
 </body>
 </html>
