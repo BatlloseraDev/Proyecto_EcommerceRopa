@@ -5,28 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seccion Vendedor</title>
     <link rel="stylesheet" href="styles/vendedorStyles.css">
+    
 </head>
 <body class="vendedor-home">
     <div class="header-tienda">
-
+        <header>
+            <a>E-commerce de Ropa</a>
+        </header>
     </div>
     <div class="header-vendedor">
         <header>
-            <a>E-commerce de Ropa - Sección de Vendedor</a>
+            <a>Sección de **Vendedor**</a>
         </header>
     </div>
     <div class="contenedor">
         <!--Barra Lateral-->
         <div class="BarraLateral">
             <h2>Menú</h2>
+            <ul>
+                <li><i href=""></i><a>Productos</a></li> <!--Meter icono-->
+                <li><i href=""></i><a>Categorias</a></li><!--Meter icono-->
+                <li><i href=""></i><a>Subir productos</a></li><!--Meter icono-->
+            </ul>
+
+
+
+
+            <!--
             <button>Ver Productos</button>
-            <button>Subir Producto</button>
+            <button>Subir Producto</button>-->
         </div>
 
         <div class="tabla-productos">
             <table>
                 <thead>
-                    <tr>
+                    <tr class="nombre-tabla">
                         <th>ID</th>
                         <th>Imagen</th>
                         <th>Nombre</th>
@@ -37,19 +50,67 @@
                         <th>Estado</th>
                         <th>Acciones</th>
                     </tr>
-                    <tr>
+                    <tr class="buscador">
                         <td><input type="number" placeholder="id del Producto"></td>
                         <td></td>
                         <td><input type="text" placeholder="Buscar por nombre"></td>
                         <td><input type="text" placeholder="Buscar ref."></td>
                         <td><input type="text" placeholder="Buscar Categoria"></td>
-                        <td><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
-                        <td><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
                         <td></td>
                         <td><button>🔍 Buscar</button></td>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody><!--Generico para la js-->
+                    <tr>
+                        <td>19</td>
+                        <td><img src="img/StonesShirt.png" alt="Camiseta" width="50"> </td>
+                        <td>camiseta</td>
+                        <td>demo_1</td>
+                        <td>camisetas</td>
+                        <td>13,90€</td>
+                        <td>300</td>
+                        <td class="estado">✔️</td>
+                        <td class="Acciones">
+                            <button>✏️</button>
+                            <button>⋮</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody><!--Generico para la js-->
+                    <tr>
+                        <td>19</td>
+                        <td><img src="img/StonesShirt.png" alt="Camiseta" width="50"> </td>
+                        <td>camiseta</td>
+                        <td>demo_1</td>
+                        <td>camisetas</td>
+                        <td>13,90€</td>
+                        <td>300</td>
+                        <td class="estado">✔️</td>
+                        <td class="Acciones">
+                            <button>✏️</button>
+                            <button>⋮</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody><!--Generico para la js-->
+                    <tr>
+                        <td>19</td>
+                        <td><img src="img/StonesShirt.png" alt="Camiseta" width="50"> </td>
+                        <td>camiseta</td>
+                        <td>demo_1</td>
+                        <td>camisetas</td>
+                        <td>13,90€</td>
+                        <td>300</td>
+                        <td class="estado">✔️</td>
+                        <td class="Acciones">
+                            <button>✏️</button>
+                            <button>⋮</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody><!--Generico para la js-->
                     <tr>
                         <td>19</td>
                         <td><img src="img/StonesShirt.png" alt="Camiseta" width="50"> </td>

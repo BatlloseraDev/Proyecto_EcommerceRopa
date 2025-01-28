@@ -9,22 +9,34 @@ body.vendedor-home{
     padding: 0;
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    max-width: max-content;
     background-color: #f0f0f0;
 }
 
 /*Cabecero*/
+.header-tienda{
+    background-color: rgb(15, 15, 15);
+    color: white;
+    padding: 0.25%;
+    text-align: center;
+    font-size: small;
+    
+}
+
 
 .header-vendedor{
     background-color: #003A70;
     color: white;
     padding: 1rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
+    
     
 }
 
 .contenedor{
+    width: auto;
     display: flex;
     flex: 1;
 }
@@ -33,20 +45,55 @@ body.vendedor-home{
 
 .BarraLateral{
     width: 8%;
-    background:  #4A90E2;
+    background:  #292833;
     color: white;
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6); 
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: inset -1px 1px 5px rgba(0, 0, 0, 0.6); 
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .BarraLateral h2{
     color: white;
+    margin: 0;
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
+.BarraLateral ul{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.BarraLateral ul li{
+   
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.BarraLateral ul li:hover{
+    background-color: #0f0f11;
+}
+
+
+.BarraLateral ul li a{
+    position: relative;
+    left: 15px;
+}
+
+
+
+/*
 .BarraLateral button{
     background-color: #007BFF;
     color: white;
@@ -62,20 +109,49 @@ body.vendedor-home{
 
 .BarraLateral button:hover{
     background-color: #0056B3;
-}
+}*/
 
 /*Tabla productos*/
 .tabla-productos table{
+    
     width: 100%;
     border-collapse: collapse;
 }
 
+    /*calculo la anchura de las columnas*/
+.tabla-productos th:nth-child(1) { width: 5%; } /*ID*/
+.tabla-productos th:nth-child(2) { width: 50px; } /*imagen*/
+.tabla-productos th:nth-child(3) { width: auto } /*Nombre*/
+.tabla-productos th:nth-child(4) { width: auto} /*Ref*/
+.tabla-productos th:nth-child(5) { width: auto; } /*Categoria*/
+.tabla-productos th:nth-child(6) { width: 8% } /*Precio*/
+.tabla-productos th:nth-child(7) { width: 8% } /*Cantidad*/
+.tabla-productos th:nth-child(8) { width: 5%; } /*Estado*/
+.tabla-productos th:nth-child(9) { width: 8%; } /*Acciones*/
+
+
+tr.nombre-tabla,tr.nombre-tabla th {
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid aqua;
+   
+    
+}
+tr.buscador,tr.buscador td{
+    border: none;
+}
+
 .tabla-productos th, td{
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     padding: 8px;
     text-align: left;
     height: 10px;
 }
+td.min-max-unidad input[type="number"]{
+    width: 40%;
+}
+
 
 td.estado{
     text-align: center;
@@ -106,6 +182,9 @@ td.estado{
     color:#4A90E2;
 }
 
+
+
+/*fin tabla productos*/
 
 /*
 .ContenidoPrincipal{
