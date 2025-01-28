@@ -1,0 +1,114 @@
+/* Cuerpo General */
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/*Cabecero*/
+
+header{
+    background-color: #003A70;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+
+.contenedor{
+    display: flex;
+    flex: 1;
+}
+
+/*Barra Lateral*/
+
+.BarraLateral{
+    width: 20%;
+    background:  #4A90E2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.6); 
+}
+
+.BarraLateral h2{
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.BarraLateral button{
+    background-color: #007BFF;
+    color: white;
+    border: 2px solid #003A70;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
+}
+
+.BarraLateral button:hover{
+    background-color: #0056B3;
+}
+
+.ContenidoPrincipal{
+    flex: auto;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0 4px rgba(0, 0, 0, 0.8); 
+}
+
+.ContenidoPrincipal h2{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ListaProducto{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.CartaProducto{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow:  0 2px 4px rgba(0,0, 0, 0.1);
+    width: 80%;
+}
+
+.CartaProducto img{
+    width: 300px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(5px);
+}
+
+.CartaProducto h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.CartaProducto p {
+    margin: 0.5rem 0;
+}
+
+.CartaProducto span{
+    font-weight: bold;
+    color:  #4A90E2;
+}
+
+
