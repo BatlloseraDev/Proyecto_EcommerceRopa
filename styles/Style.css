@@ -142,7 +142,7 @@ body.login {
     display: block;
     width: 100%;
     font-weight: bold;
-    background:linear-gradient(45deg, red 0%, #93fcd5  100%);
+    background:linear-gradient(45deg, #0eb376 0%, #93fcd5  100%);
     color: white;
     padding-block:  15px;
     margin: 20px auto;
