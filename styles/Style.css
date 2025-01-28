@@ -20,6 +20,7 @@
 #FF6F61 (terracota)
 #F8BD76 (Amarillo apagado pastel)
 #808000 (Verde oliva pastel)
+#FEB7D7 (Rosa Pastel)
 
 ------ Colores Complementarios------ (bordes o iconos)
 #D3D3D3 (gris claro)
@@ -31,5 +32,195 @@
 
 
 
-****si agregais más colores añadizlos a la lista para que todos lo tengamos a mano****
+****si agregais más colores añadizlos a la lista para que todos lo tengamos a mano
 */
+/*Inicio registro*/
+.body-registro{
+    display: flex;
+    justify-content: center;/*Para centrar el formulario*/
+    background: #f0f0f0;
+    background-size: cover;/*Para cubrir toda la pagina del color o imagen seleccionado*/
+}
+/*Formulario del registro*/
+.form-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title-registro {
+  font-size: 28px;
+  color: #FEB7D7;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title-registro::before,.title-registro::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #FEB7D7;
+}
+
+.title-registro::before {
+  width: 18px;
+  height: 18px;
+  background-color: #FEB7D7;
+}
+
+.title-registro::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message-registro, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin-registro {
+
+  text-align: center;
+}
+
+.signin-registro a {
+  color: #FEB7D7;
+}
+
+.signin-registro a:hover {
+  text-decoration: underline #FEB7D7;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+
+.form-registro label {
+  position: relative;
+}
+
+.form-registro label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form-registro label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form-registro label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form-registro label .input:focus + span,.form label .input:valid + span {
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form-registro label .input:valid + span {
+  color: green;
+  top: -1px;
+  font-size: 0.7em;
+}
+
+.submit-registro {
+  display: flex;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #FEB7D7;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}
+
+.submit-registro:hover {
+  background-color: #C28CA4;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  transform: .3s ease;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+  width: 373px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1;
+border-radius: 10px;
+}
+
+.dropdown-content a {
+padding: 8px 16px;
+text-decoration: none;
+display: block;
+color: rgba(88, 87, 87, 0.822);
+
+
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+/*Fin registro*/
