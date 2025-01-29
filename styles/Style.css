@@ -38,32 +38,53 @@
 /* Usamos H1 exclusivamente para meter la marca en el banner de todas las paginas, Lucrel se encarga del logo*/
 
 
-h1 {
-    color: #1C1C1C;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner h1 {
+    color: #e4e4e4;
     border: none;
-    margin-left: 120px;
     border: none;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    }
 
-h2 {
-    color: #1C1C1C;
+.opciones button {
+   
+    background-color: rgba(0, 255, 255, 0);
     border: none;
-    border: none;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border-right: 1px solid rgb(122, 122, 122);
+    font-size: larger;
+
+
 }
+.opciones button:hover {
+  
+    background-color: rgb(66, 66, 66);
+
+}
+
+.cliente-home{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: max-content;
+    background-color: #F0F0F0;
+}
+
 
 .header {
     display: inline-flex;
+    width: 100%;
+    background-color: #1C1C1C;
+    
 }
 
 .carrito {
     align-items: center;
     justify-items: center;
-    width: 120px;
-    height: 100px;
     padding-left: 20px;
     background-color:#FF6F61  ;
     display:  flex;
@@ -73,19 +94,18 @@ h2 {
     height: 100px;
     width: 100%;
     border: none;
-    background-color: #F5F5DC ;
+    
     display: flex;
     align-items: center;
     justify-items: center;
-    padding-left: 100px;
-    
+    justify-content: center;
 }
 
 .opciones {
     display: flex;
     width: 120px;
     height: 100px;
-    background-color: #A7C7E7 ;
+    background-color:transparent;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -94,15 +114,17 @@ h2 {
 }
 
 .general {
+    width: 100%;
     display: flex;
+    flex: 1;
 }
 
 .busqueda {
-    margin-top: 100px;
-    position: fixed;
-    width: 200px;
+    
+    width: 12%;
+    position: sticky;
     float: left;
-    height: 9000px;
+    min-height: 100vh;
     text-align: center;
     padding: 1%;
     background-color: #F5F5DC ;
