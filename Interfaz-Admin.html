@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de Ropa</title>
-    <link href="Styles.css" rel="stylesheet">
+    <link href="styles/Style.css" rel="stylesheet">
 </head>
 <body class="Cuerpo-Admin">
-    <div class="dashboard">
+
+    <div class="header-tienda">
+        <header>
+            <a>E-commerce de Ropa</a>
+        </header>
+    </div>
+    <div class="header-vendedor">
+        <header>
+            <a>Sección de **Admin**</a>
+        </header>
+    </div>
+
+
+
+    <div class="contenedor">
+        
+
+        <div class="BarraLateral">
+            <h2>Menú</h2>
+            <ul>
+                <li><i href=""></i><a>STOCK Y VENTAS</a></li> <!--Meter icono-->
+                <li><i href=""></i><a>VENDEDORES</a></li><!--Meter icono-->
+                <li><i href=""></i><a>PRODUCTOS</a></li><!--Meter icono-->
+            </ul>
+
+        </div>
+
+
+        <!--
         
         <nav class="sidebar">
             <h1 class="logo"></h1>
@@ -17,13 +45,64 @@
                 <li><a href="#productos">PRODUCTOS</a></li>
             </ul>
         </nav>
+        -->
 
-        <main class="content">
+        <div class="tabla-productosAdmin">
             
-            <header class="banner">
-                <h1>E-commerce de Ropa - Stock y Ventas</h1>
-            </header>
+            <table>
+                <thead>
+                    <tr class="nombre-tabla">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Stock</th>
+                        <th>Ventas</th>
+                        <th>Ganancias</th>
+                        <th>% Pagados</th>
+                    </tr>
+                    <tr class="buscador">
+                        <td><input type="number" placeholder="id del Producto"></td>
+                        <td><input type="text" placeholder="Buscar por nombre"></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Camiseta Básica</td>
+                        <td>120</td>
+                        <td>85</td>
+                        <td>1275</td>
+                        <td>5%</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>102</td>
+                        <td>Vaqueros Slim Fit</td>
+                        <td>60</td>
+                        <td>40</td>
+                        <td>2000</td>
+                        <td>7%</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>103</td>
+                        <td>Zapatillas Deportivas</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>1500</td>
+                        <td>10%</td>
+                    </tr>
+                </tbody>
+            </table>
 
+
+            <!--
+            
             <section id="inventario">
                 <h2>Inventario</h2>
                 <div class="data-container">
@@ -61,6 +140,7 @@
                     </div>
                 </div>
             </section>
+            -->
         </main>
     </div>
 </body>

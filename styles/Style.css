@@ -110,7 +110,7 @@ body{
 
 /*Barra lateral*/
 .BarraLateral{
-    width: 8%;
+    width: 12%;
     background:  #292833;
     color: white;
     display: flex;
@@ -143,7 +143,7 @@ body{
     align-items: center;
     cursor: pointer;
     width: 100%;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
 .BarraLateral ul li:hover{
@@ -294,7 +294,7 @@ td.estado{
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #f0f0f0;
     color: #333;
 }
 
@@ -360,11 +360,7 @@ td.estado{
     padding: 30px;
 }
 
-h2 {
-    color: #333;
-    font-size: 28px;
-    margin-bottom: 20px;
-}
+
 
 .data-container {
     background-color: #ffffff;
@@ -401,6 +397,47 @@ h2 {
     text-align: left;
     word-wrap: break-word;
 }
+
+/*
+Edit 
+*/
+.tabla-productosAdmin table{
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+
+
+.tabla-productosAdmin th, td{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 10px;
+}
+.tabla-productosAdmin th{
+    background: #f4f4f4;
+}
+
+.tabla-productosAdmin input{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.tabla-productosAdmin th:nth-child(1) { width: 5%; } /*ID*/
+.tabla-productosAdmin th:nth-child(2) { width: auto } /*nombre*/
+.tabla-productosAdmin th:nth-child(3) { width: auto } /*stock*/
+.tabla-productosAdmin th:nth-child(4) { width: auto} /*vetas*/
+.tabla-productosAdmin th:nth-child(5) { width: auto; } /*ganancias*/
+.tabla-productosAdmin th:nth-child(6) { width: 8%;  } /*impuesto%*/
+.tabla-productosAdmin th, td:nth-child(3) { text-align: center;  }
+.tabla-productosAdmin th, td:nth-child(4) { text-align: center;  } 
+.tabla-productosAdmin th, td:nth-child(5) { text-align: center;  } 
+.tabla-productosAdmin th, td:nth-child(6) { text-align: center;  } 
 /*Gema: inicio sesion*/ /*Editado por victor*/
 body.login {
     font-family: 'Tahoma, sans-serif';
@@ -420,14 +457,14 @@ body.login {
     border-radius: 25px;
     padding: 25px 35px;
     border: 5px solid rgb(255, 255, 255);
-    box-shadow: rgba(215, 133, 133, 0.878) 0px 30px 30px -20px;
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 30px 30px -20px;
     margin: 20px;
 }    
 .heading-login{
     text-align: center;
     font-weight: 900;
     font-size: 30px;
-    color: rgb(211, 61, 16);
+    color: #0059b3;
 }
 
 .login-form {
@@ -442,23 +479,23 @@ body.login {
     padding: 15px 20px;
     border-radius: 10px;
     margin-top:15px;
-    box-shadow: #ff6f61 0px 10px 10px -5px;
+    box-shadow: #4A90E2 0px 10px 10px -5px;
     border-inline: 2px solid transparent;
 }
 
 .login-form .input_login::-moz-placeholder{
-    color: rgb(211, 61, 16);
+    color: rgb(8, 22, 59);
 }
 
 
 
 .login-form .input_login::placeholder{
-    color: rgb(211, 61, 16);
+    color: rgb(8, 22, 59);
 }
 
 .login-form .input_login:focus{
     outline: none;
-    border-inline: 2px solid #ff6f61 ;
+    border-inline: 2px solid #61b8ff ;
   
 }
 .login-form .forgot-password {    
@@ -471,7 +508,7 @@ body.login {
 .login-form .forgot-password a{    
     font-size: 11px;
     margin-top: 10px;
-    color: #ff6f61;
+    color: #4A90E2;
     text-decoration: none;
  
 }
@@ -481,12 +518,12 @@ body.login {
     display: block;
     width: 100%;
     font-weight: bold;
-    background:linear-gradient(45deg, rgb(245, 63, 18) 0%, rgb(226, 125, 112) 100%);
+    background:linear-gradient(45deg, #004080 0%, #4A90E2 100%);
     color: white;
     padding-block:  15px;
     margin: 20px auto;
     border-radius: 15px;
-    box-shadow: rgba(215, 159, 133, 0.878) 0px 20px 10px -15px;
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 20px 10px -15px;
 
 }
 
@@ -508,32 +545,32 @@ body.login {
     display: block;
     width: 100%;
     font-weight: bold;
-    background:linear-gradient(45deg, #0eb376 0%, #93fcd5  100%);
+    background:linear-gradient(45deg, #0e92b3 0%, #93d5fc  100%);
     color: white;
     padding-block:  15px;
     margin: 20px auto;
     border-radius: 15px;
-    box-shadow: rgba(215, 159, 133, 0.878) 0px 20px 10px -15px;
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 20px 10px -15px;
 
 }
 
 .signup-button:hover
 {
    transform: scale(1.03);
-   box-shadow: rgba(215, 143, 133, 0.878) 0px 23px 10px -20px;
+   box-shadow: rgba(95, 175, 206, 0.878) 0px 23px 10px -20px;
 
 }
 
 
 .signup-button:active {
     transform: scale(0.95);
-    box-shadow: rgba(215, 143, 133, 0.878) 0px 15px 10px -10px;
+    box-shadow: rgba(58, 158, 197, 0.878) 0px 15px 10px -10px;
 }
 
 
 
 /*Gema: fin inicio sesion*/
-****si agregais más colores añadizlos a la lista para que todos lo tengamos a mano
+/***si agregais más colores añadizlos a la lista para que todos lo tengamos a mano
 */
 /*Inicio registro*/
 .body-registro{
@@ -541,6 +578,8 @@ body.login {
     justify-content: center;/*Para centrar el formulario*/
     background: #f0f0f0;
     background-size: cover;/*Para cubrir toda la pagina del color o imagen seleccionado*/
+    align-items: center;
+    flex-direction: column;
 }
 /*Formulario del registro*/
 .form-registro {
@@ -556,7 +595,7 @@ body.login {
 
 .title-registro {
   font-size: 28px;
-  color: #FEB7D7;
+  color: #0059b3;
   font-weight: 600;
   letter-spacing: -1px;
   position: relative;
@@ -572,13 +611,13 @@ body.login {
   width: 16px;
   border-radius: 50%;
   left: 0px;
-  background-color: #FEB7D7;
+  background-color: #b7d8fe;
 }
 
 .title-registro::before {
   width: 18px;
   height: 18px;
-  background-color: #FEB7D7;
+  background-color: #b7d3fe;
 }
 
 .title-registro::after {
@@ -598,11 +637,11 @@ body.login {
 }
 
 .signin-registro a {
-  color: #FEB7D7;
+  color: #b7cdfe;
 }
 
 .signin-registro a:hover {
-  text-decoration: underline #FEB7D7;
+  text-decoration: underline #b7cafe;
 }
 
 .flex {
@@ -646,25 +685,31 @@ body.login {
 
 .form-registro label .input:valid + span {
   color: green;
-  top: -1px;
-  font-size: 0.7em;
+  top: 3px;
+  font-size: 0.5em;
 }
+.form-registro label .input:not(:placeholder-shown):invalid + span {
+    color: red;
+    top: 3px;
+    font-size: 0.5em;
+  }
 
+/*
 .submit-registro {
   display: flex;
   justify-content: center;
   border: none;
   outline: none;
-  background-color: #FEB7D7;
+  background-color: #b7d8fe;
   padding: 10px;
   border-radius: 10px;
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
-}
+}*/
 
 .submit-registro:hover {
-  background-color: #C28CA4;
+  background-color: #8c9fc2;
   cursor: pointer;
 }
 
