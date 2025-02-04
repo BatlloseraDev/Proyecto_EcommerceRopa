@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <link rel="stylesheet" href="styles/Style.css">
+</head>
+<body >
+  
+    <div class="header-tienda-cliente">
+        <header>
+            <div class="opciones" href="#">
+                opciones
+            </div>
+            <a>Sección de **tienda**</a>
+            <div class="carrito" href="#">
+                🛒
+            </div>
+        </header>
+    </div>
+
+<div class="contenedor">
+    <div class="BarraLateralCliente"><!-- Barra de busqueda productos.-->
+        <h2>Menu</h2>
+        <form id="filtro-productos"><!--Para js-->
+            <label for="Categoria">¿Que prenda esta buscando?</label><br>
+            <select class="tipoRopa" id="Categoria" name="categoria">
+                <option value="pantalones">Pantalones</option>
+                <option value="camisetas">Camisetas</option>
+                <option value="camisas">Camisas</option>
+                <option value="chaquetas">Chaquetas y abrigos</option>
+                <option value="zapatos">Zapatos</option>
+                <option value="accesorios">Accesorios</option>
+                <option value="otros">Otros</option>
+            </select>
+            <br><br>
+            <label for="talla"> Elija talla:</label>
+            <select class="talla" id="talla" name="talla">
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>
+            </select>
+    
+            <br><br>
+
+            <label for="precio-min">Precio mínimo (€):</label>
+            <input type="number" id="precio-min" name="precio-min" min="0" placeholder="0">
+    
+            <br><br>
+    
+            <label for="precio-max">Precio máximo (€):</label>
+            <input type="number" id="precio-max" name="precio-max" min="0" placeholder="1000">
+    
+            <br><br>
+    
+            <button type="submit" class="boton-filtro">Aplicar</button>
+
+        </form>
+        
+        
+        
+        
+        <!--
+        <h2>Menú</h2> 
+        <label>¿Que prenda esta buscando?</label><br>
+            <select style="width: 80%;">
+                <option>Pantalones</option>
+                <option>Camisetas</option>
+                <option>Camisas</option>
+                <option>Chaquetas y abrigos</option>
+                <option>Zapatos</option>
+                <option>Accesorios</option>
+                <option>Otros</option>
+        </select>
+        <br>
+        <div>
+            <label>Elija talla: </label>
+            <select>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select>
+    
+        </div>
+        <br>
+        <input type="submit" value="Aplicar" class="boton_filtro">
+
+        
+        <button>Ver Productos</button>
+        <button>Subir Producto</button>-->
+    </div>
+    <div class="content">
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+        <div class="caja">
+        </div>
+    </div>
+
+</div>
+
+    <!--encabezado. 3 divs que dividan la parte de arriba entre banner con imagen,
+     boton de opciones (desplegable) y boton de carrito (¿Java?) -->
+
+
+  
+
+    <!--formulario de busqueda, fijo. Desplegable de productos. Desplegable de tallas.
+    Rango de precio. boton "Aplicar filtro 
+
+    <div class="general">
+        <div class="busqueda">
+            <label>¿Que prenda esta buscando?</label><br>
+            <select>
+                <option>Pantalones</option>
+                <option>Camisetas</option>
+                <option>Camisas</option>
+                <option>Chaquetas y abrigos</option>
+                <option>Zapatos</option>
+                <option>Accesorios</option>
+                <option>Otros</option>
+            </select><br>
+            <br>
+    
+            <label>Elija talla</label><br>
+            <select>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+                <option>XXL</option>
+            </select><br>
+    
+            <br>
+            <input type="submit" value="Aplicar" class="boton_filtro">
+    
+        </div>
+      
+
+     
+
+
+    </div> -->
+       
+
+    
+    
+</body>
+
+</html>

@@ -1,48 +1,8 @@
-/* comentar cada apartado, por ejemplo:*/
+
+/*Sergio*/ /*Reescrito por viktor*/
 
 
-/*Persona 1: index*/
-    /*comentar cada cosa que hagais para saber para que sirve
-    Y como funciona*/
-
-/*Persona 2: Registro*/
-
-/*Persona 1: Log In*/
-
-
-/* Guia colores:
-
------- Fondos------
-#F0F0F0 (blanco) no tiene que ser 100 % blanco
-#F5F5DC (beige claro y calido)
-
------- Colores secundarios------ (botones)
-#FF6F61 (terracota)
-#F8BD76 (Amarillo apagado pastel)
-#808000 (Verde oliva pastel)
-
------- Colores Complementarios------ (bordes o iconos)
-#D3D3D3 (gris claro)
-#A7C7E7 (Azul claro pastel)
-
------- Texto------ (dependiendo del fondo)
-#1C1C1C (gris oscuro)
-#F0F0F0 (blanco apagado)
-
-
-
-****si agregais más colores añadizlos a la lista para que todos lo tengamos a mano****
-*/
-
-
-/*Incorporacion de los css*/
-
-
-*{
-    margin: 0;
-    padding: 0;
-}
-
+/* Cuerpo General */
 body{
     font-family: Arial, sans-serif;
     margin: 0;
@@ -50,15 +10,11 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    min-width: 100vw;
-    width: 100vw;
-    box-sizing: border-box;
-
+    max-width: max-content;
     background-color: #f0f0f0;
 }
 
-
-/*headers*/
+/*Cabecero*/
 .header-tienda{
     background-color: rgb(15, 15, 15);
     color: white;
@@ -66,18 +22,8 @@ body{
     text-align: center;
     font-size: small;
     
-    
 }
-.header-tienda-cliente header{
-    background-color: #003A70;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-size: 1rem;    
-    display: flex;
-    justify-content: space-between;
-    font-weight: bold;
-}
+
 
 .header-vendedor{
     background-color: #003A70;
@@ -86,18 +32,8 @@ body{
     text-align: center;
     font-size: 1rem;
     
+    
 }
-.opciones{
-   
-    height: 100%;
-}
-.opciones:hover{
-    color: #292833;
-}
-
-
-
-/*contenedores*/
 
 .contenedor{
     width: auto;
@@ -105,8 +41,8 @@ body{
     flex: 1;
 }
 
+/*Barra Lateral*/
 
-/*Barra lateral*/
 .BarraLateral{
     width: 8%;
     background:  #292833;
@@ -119,6 +55,7 @@ body{
     justify-content: flex-start;
     align-items: center;
 }
+
 .BarraLateral h2{
     color: white;
     margin: 0;
@@ -156,58 +93,23 @@ body{
 
 
 
-
-
-.BarraLateralCliente{
-    width: 12%;
-    background:  #292833;
+/*
+.BarraLateral button{
+    background-color: #007BFF;
     color: white;
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: inset -1px 1px 5px rgba(0, 0, 0, 0.6); 
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    min-width: 200px;
+    border: 2px solid #003A70;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease; 
 }
 
-.tipoRopa{
-    width: 80%;
-}
-.talla{
-    width: 40%;
-}
-.BarraLateralCliente input{
-    width: 20%;
-}
-
-
-/*productos cliente*/
-.content{
-    width: 100%;
-    height: 100%;
-    background-color: #F0F0F0;
-    float: left;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.caja{ /*Arreglar un poco esto */
-    width:220px;
-    height:350px;
-    min-width: 20%;
-    max-width: 35%;
-    min-height: 35%;
-    max-width: 40%;
-
-    background-color: #A7C7E7;
-    margin: 2px;
-    border-color: #292833;
-    
-}
-
+.BarraLateral button:hover{
+    background-color: #0056B3;
+}*/
 
 /*Tabla productos*/
 .tabla-productos table{
@@ -283,3 +185,57 @@ td.estado{
 
 
 /*fin tabla productos*/
+
+/*
+.ContenidoPrincipal{
+    flex: auto;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0 4px rgba(0, 0, 0, 0.8); 
+}
+
+.ContenidoPrincipal h2{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ListaProducto{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.CartaProducto{
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow:  0 2px 4px rgba(0,0, 0, 0.1);
+    width: 80%;
+}
+
+.CartaProducto img{
+    width: 300px;
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transform: scale(5px);
+}
+
+.CartaProducto h3{
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.CartaProducto p {
+    margin: 0.5rem 0;
+}
+
+.CartaProducto span{
+    font-weight: bold;
+    color:  #4A90E2;
+}
+*/
+
