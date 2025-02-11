@@ -20,6 +20,8 @@
 #FF6F61 (terracota)
 #F8BD76 (Amarillo apagado pastel)
 #808000 (Verde oliva pastel)
+#61FFC4 (Azul verdoso)
+#FEB7D7 (Rosa Pastel)
 
 ------ Colores Complementarios------ (bordes o iconos)
 #D3D3D3 (gris claro)
@@ -33,3 +35,738 @@
 
 ****si agregais más colores añadizlos a la lista para que todos lo tengamos a mano****
 */
+
+
+/*Incorporacion de los css*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+    width: 100vw;
+    box-sizing: border-box;
+
+    background-color: #f0f0f0;
+}
+
+
+/*headers*/
+.header-tienda{
+    background-color: rgb(15, 15, 15);
+    color: white;
+    padding: 0.25%;
+    text-align: center;
+    font-size: small;
+    
+    
+}
+.header-tienda-cliente header{
+    background-color: #003A70;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;    
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.header-vendedor{
+    background-color: #003A70;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+    
+}
+.opciones{
+   
+    height: 100%;
+}
+.opciones:hover{
+    color: #292833;
+}
+
+
+
+/*contenedores*/
+
+.contenedor{
+    width: auto;
+    display: flex;
+    flex: 1;
+}
+
+
+/*Barra lateral*/
+.BarraLateral{
+    width: 12%;
+    background:  #292833;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: inset -1px 1px 5px rgba(0, 0, 0, 0.6); 
+    justify-content: flex-start;
+    align-items: center;
+}
+.BarraLateral h2{
+    color: white;
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.BarraLateral ul{
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.BarraLateral ul li{
+   
+    padding-top: 16px;
+    padding-bottom: 16px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.BarraLateral ul li:hover{
+    background-color: #0f0f11;
+}
+
+
+.BarraLateral ul li a{
+    position: relative;
+    left: 15px;
+}
+
+
+
+
+
+.BarraLateralCliente{
+    width: 12%;
+    background:  #292833;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: inset -1px 1px 5px rgba(0, 0, 0, 0.6); 
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    min-width: 200px;
+}
+
+.tipoRopa{
+    width: 80%;
+}
+.talla{
+    width: 40%;
+}
+.BarraLateralCliente input{
+    width: 20%;
+}
+
+
+/*productos cliente*/
+.content{
+    width: 100%;
+    height: 100%;
+    background-color: #F0F0F0;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.caja{ /*Arreglar un poco esto */
+    width:220px;
+    height:350px;
+    min-width: 20%;
+    max-width: 35%;
+    min-height: 35%;
+    max-width: 40%;
+
+    background-color: #A7C7E7;
+    margin: 2px;
+    border-color: #292833;
+    
+}
+
+
+/*Tabla productos*/
+.tabla-productos table{
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    /*calculo la anchura de las columnas*/
+.tabla-productos th:nth-child(1) { width: 5%; } /*ID*/
+.tabla-productos th:nth-child(2) { width: 50px; } /*imagen*/
+.tabla-productos th:nth-child(3) { width: auto } /*Nombre*/
+.tabla-productos th:nth-child(4) { width: auto} /*Ref*/
+.tabla-productos th:nth-child(5) { width: auto; } /*Categoria*/
+.tabla-productos th:nth-child(6) { width: 8% } /*Precio*/
+.tabla-productos th:nth-child(7) { width: 8% } /*Cantidad*/
+.tabla-productos th:nth-child(8) { width: 5%; } /*Estado*/
+.tabla-productos th:nth-child(9) { width: 8%; } /*Acciones*/
+
+
+tr.nombre-tabla,tr.nombre-tabla th {
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid aqua;
+   
+    
+}
+tr.buscador,tr.buscador td{
+    border: none;
+}
+
+.tabla-productos th, td{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 10px;
+}
+td.min-max-unidad input[type="number"]{
+    width: 40%;
+}
+
+
+td.estado{
+    text-align: center;
+}
+
+.tabla-productos th{
+    background: #f4f4f4;
+}
+
+.tabla-productos input{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.Acciones{
+    /*display: flex;*/
+    gap: 10px;
+}
+
+.Acciones button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.Acciones button:hover{
+    color:#4A90E2;
+}
+
+
+
+/*fin tabla productos*/
+
+
+/* Carlos */
+
+
+.Cuerpo-Admin {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #004080; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.menu li {
+    margin-bottom: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px 15px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #0059b3; 
+    color: #ffffff;
+}
+
+.banner {
+    background-color: #004080; 
+    color: #ffffff;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+}
+
+
+
+.data-container {
+    background-color: #ffffff;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.data-header, .data-row {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 15px;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.data-header {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: #555;
+}
+
+.data-row {
+    background-color: #ffffff;
+    transition: background-color 0.3s;
+}
+
+.data-row:hover {
+    background-color: #f9f9f9;
+}
+
+.data-column {
+    padding: 5px 10px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+/*
+Edit 
+*/
+.tabla-productosAdmin table{
+    
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+
+
+
+.tabla-productosAdmin th, td{
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    height: 10px;
+}
+.tabla-productosAdmin th{
+    background: #f4f4f4;
+}
+
+.tabla-productosAdmin input{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.tabla-productosAdmin th:nth-child(1) { width: 5%; } /*ID*/
+.tabla-productosAdmin th:nth-child(2) { width: auto } /*nombre*/
+.tabla-productosAdmin th:nth-child(3) { width: auto } /*stock*/
+.tabla-productosAdmin th:nth-child(4) { width: auto} /*vetas*/
+.tabla-productosAdmin th:nth-child(5) { width: auto; } /*ganancias*/
+.tabla-productosAdmin th:nth-child(6) { width: 8%;  } /*impuesto%*/
+.tabla-productosAdmin th, td:nth-child(3) { text-align: center;  }
+.tabla-productosAdmin th, td:nth-child(4) { text-align: center;  } 
+.tabla-productosAdmin th, td:nth-child(5) { text-align: center;  } 
+.tabla-productosAdmin th, td:nth-child(6) { text-align: center;  } 
+/*Gema: inicio sesion*/ /*Editado por victor*/
+body.login {
+    font-family: 'Tahoma, sans-serif';
+    background: linear-gradient(200deg)#f0f0f0,#cfc9cf;    
+    padding: 0;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container_login {
+
+    max-width: 350px;
+    background-color: #f8f9fd;
+    background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+    border-radius: 25px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 30px 30px -20px;
+    margin: 20px;
+}    
+.heading-login{
+    text-align: center;
+    font-weight: 900;
+    font-size: 30px;
+    color: #0059b3;
+}
+
+.login-form {
+    margin-top: 20px;
+}
+
+
+.login-form .input_login{
+    width: 85%;
+    background: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-top:15px;
+    box-shadow: #4A90E2 0px 10px 10px -5px;
+    border-inline: 2px solid transparent;
+}
+
+.login-form .input_login::-moz-placeholder{
+    color: rgb(8, 22, 59);
+}
+
+
+
+.login-form .input_login::placeholder{
+    color: rgb(8, 22, 59);
+}
+
+.login-form .input_login:focus{
+    outline: none;
+    border-inline: 2px solid #61b8ff ;
+  
+}
+.login-form .forgot-password {    
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+ 
+}
+
+.login-form .forgot-password a{    
+    font-size: 11px;
+    margin-top: 10px;
+    color: #4A90E2;
+    text-decoration: none;
+ 
+}
+
+.login-form .login-button
+{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background:linear-gradient(45deg, #004080 0%, #4A90E2 100%);
+    color: white;
+    padding-block:  15px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 20px 10px -15px;
+
+}
+
+.login-form .login-button:hover
+{
+   transform: scale(1.03);
+   box-shadow: rgba(215, 143, 133, 0.878) 0px 23px 10px -20px;
+
+}
+
+
+.form .login-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(215, 143, 133, 0.878) 0px 15px 10px -10px;
+}
+  
+.signup-button
+{
+    display: block;
+    width: 100%;
+    font-weight: bold;
+    background:linear-gradient(45deg, #0e92b3 0%, #93d5fc  100%);
+    color: white;
+    padding-block:  15px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 20px 10px -15px;
+
+}
+
+.signup-button:hover
+{
+   transform: scale(1.03);
+   box-shadow: rgba(95, 175, 206, 0.878) 0px 23px 10px -20px;
+
+}
+
+
+.signup-button:active {
+    transform: scale(0.95);
+    box-shadow: rgba(58, 158, 197, 0.878) 0px 15px 10px -10px;
+}
+
+
+
+/*Gema: fin inicio sesion*/
+/***si agregais más colores añadizlos a la lista para que todos lo tengamos a mano
+*/
+/*Inicio registro*/
+.body-registro{
+    display: flex;
+    justify-content: center;/*Para centrar el formulario*/
+    background: #f0f0f0;
+    background-size: cover;/*Para cubrir toda la pagina del color o imagen seleccionado*/
+    align-items: center;
+    flex-direction: column;
+}
+/*Formulario del registro*/
+.form-registro {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 350px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.title-registro {
+  font-size: 28px;
+  color: #0059b3;
+  font-weight: 600;
+  letter-spacing: -1px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+
+.title-registro::before,.title-registro::after {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  left: 0px;
+  background-color: #b7d8fe;
+}
+
+.title-registro::before {
+  width: 18px;
+  height: 18px;
+  background-color: #b7d3fe;
+}
+
+.title-registro::after {
+  width: 18px;
+  height: 18px;
+  animation: pulse 1s linear infinite;
+}
+
+.message-registro, .signin {
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+}
+
+.signin-registro {
+
+  text-align: center;
+}
+
+.signin-registro a {
+  color: #b7cdfe;
+}
+
+.signin-registro a:hover {
+  text-decoration: underline #b7cafe;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
+
+.form-registro label {
+  position: relative;
+}
+
+.form-registro label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  border-radius: 10px;
+}
+
+.form-registro label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: grey;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.form-registro label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.form-registro label .input:focus + span,.form label .input:valid + span {
+  top: 0px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.form-registro label .input:valid + span {
+  color: green;
+  top: 3px;
+  font-size: 0.5em;
+}
+.form-registro label .input:not(:placeholder-shown):invalid + span {
+    color: red;
+    top: 3px;
+    font-size: 0.5em;
+  }
+
+/*
+.submit-registro {
+  display: flex;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #b7d8fe;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  transform: .3s ease;
+}*/
+
+.submit-registro:hover {
+  background-color: #8c9fc2;
+  cursor: pointer;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  outline: none;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  transform: .3s ease;
+  border: 1px solid rgba(105, 105, 105, 0.397);
+  color: rgba(88, 87, 87, 0.822);
+  font-size: 14px;
+  width: 373px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+z-index: 1;
+border-radius: 10px;
+}
+
+.dropdown-content a {
+padding: 8px 16px;
+text-decoration: none;
+display: block;
+color: rgba(88, 87, 87, 0.822);
+
+
+}
+
+.dropdown-content a:hover {
+background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+/*Fin registro*/

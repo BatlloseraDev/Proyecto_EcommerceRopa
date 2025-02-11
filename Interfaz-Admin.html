@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa</title>
+    <link href="styles/Style.css" rel="stylesheet">
+</head>
+<body class="Cuerpo-Admin">
+
+    <div class="header-tienda">
+        <header>
+            <a>E-commerce de Ropa</a>
+        </header>
+    </div>
+    <div class="header-vendedor">
+        <header>
+            <a>Sección de **Admin**</a>
+        </header>
+    </div>
+
+
+
+    <div class="contenedor">
+        
+
+        <div class="BarraLateral">
+            <h2>Menú</h2>
+            <ul>
+                <li><i href=""></i><a>STOCK Y VENTAS</a></li> <!--Meter icono-->
+                <li><i href=""></i><a>VENDEDORES</a></li><!--Meter icono-->
+                <li><i href=""></i><a>PRODUCTOS</a></li><!--Meter icono-->
+            </ul>
+
+        </div>
+
+
+        <!--
+        
+        <nav class="sidebar">
+            <h1 class="logo"></h1>
+            <ul class="menu">
+                <li><a href="#stockyventas">STOCK Y VENTAS</a></li>
+                <li><a href="#vendedores">VENDEDORES</a></li>
+                <li><a href="#productos">PRODUCTOS</a></li>
+            </ul>
+        </nav>
+        -->
+
+        <div class="tabla-productosAdmin">
+            
+            <table>
+                <thead>
+                    <tr class="nombre-tabla">
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Stock</th>
+                        <th>Ventas</th>
+                        <th>Ganancias</th>
+                        <th>% Pagados</th>
+                    </tr>
+                    <tr class="buscador">
+                        <td><input type="number" placeholder="id del Producto"></td>
+                        <td><input type="text" placeholder="Buscar por nombre"></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                        <td class="min-max-unidad"><input type="number" placeholder="Min."> - <input type="number" placeholder="Máx."></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>101</td>
+                        <td>Camiseta Básica</td>
+                        <td>120</td>
+                        <td>85</td>
+                        <td>1275</td>
+                        <td>5%</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>102</td>
+                        <td>Vaqueros Slim Fit</td>
+                        <td>60</td>
+                        <td>40</td>
+                        <td>2000</td>
+                        <td>7%</td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <tr>
+                        <td>103</td>
+                        <td>Zapatillas Deportivas</td>
+                        <td>50</td>
+                        <td>30</td>
+                        <td>1500</td>
+                        <td>10%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <!--
+            
+            <section id="inventario">
+                <h2>Inventario</h2>
+                <div class="data-container">
+                    <div class="data-header">
+                        <div class="data-column">ID Vendedor</div>
+                        <div class="data-column">Nombre</div>
+                        <div class="data-column">Stock</div>
+                        <div class="data-column">Ventas</div>
+                        <div class="data-column">Ganancias (€)</div>
+                        <div class="data-column">% Pagados</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-column">101</div>
+                        <div class="data-column">Camiseta Básica</div>
+                        <div class="data-column">120</div>
+                        <div class="data-column">85</div>
+                        <div class="data-column">1275</div>
+                        <div class="data-column">75%</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-column">102</div>
+                        <div class="data-column">Vaqueros Slim Fit</div>
+                        <div class="data-column">60</div>
+                        <div class="data-column">40</div>
+                        <div class="data-column">2000</div>
+                        <div class="data-column">90%</div>
+                    </div>
+                    <div class="data-row">
+                        <div class="data-column">103</div>
+                        <div class="data-column">Zapatillas Deportivas</div>
+                        <div class="data-column">50</div>
+                        <div class="data-column">30</div>
+                        <div class="data-column">1500</div>
+                        <div class="data-column">80%</div>
+                    </div>
+                </div>
+            </section>
+            -->
+        </main>
+    </div>
+</body>
+</html>
