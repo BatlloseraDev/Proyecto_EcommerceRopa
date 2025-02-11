@@ -124,7 +124,7 @@ body{
 .BarraLateral h2{
     color: white;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
 }
 
@@ -138,7 +138,7 @@ body{
    
     padding-top: 16px;
     padding-bottom: 16px;
-    font-size: 16px;
+    font-size: 24px;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -153,7 +153,7 @@ body{
 
 .BarraLateral ul li a{
     position: relative;
-    left: 15px;
+    left: 24px;
 }
 
 
@@ -196,7 +196,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.caja{ /*Arreglar un poco esto */
+/*.caja{ Arreglar un poco esto 
     width:220px;
     height:350px;
     min-width: 20%;
@@ -208,6 +208,44 @@ body{
     margin: 2px;
     border-color: #292833;
     
+}
+*/
+
+.caja {
+    width: 300px;
+    height: 450px;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.caja img {
+    width: 300px;  
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 5px; 
+}
+
+.caja h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.caja p {
+    font-size: 18px;
+    color: #555;
+}
+
+.precio {
+    font-size: 26px;
+    font-weight: bold;
+    color: #e44d26;
 }
 
 
