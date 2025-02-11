@@ -70,6 +70,16 @@ body{
     
     
 }
+
+.header-tienda a{
+    text-decoration: none;
+    color: white;
+}
+.header-tienda a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
 .header-tienda-cliente header{
     background-color: #003A70;
     color: white;
@@ -696,11 +706,12 @@ body.login {
 
 /* Gema, mi hoja de estilos css de el sobre nosotros del sprin2*/
 
-body.sobrenosotros {
+.sobrenosotros {
     font-family: 'Tahoma, sans-serif';
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10%;
 }
 .container_sobrenosotros {
 
