@@ -70,6 +70,16 @@ body{
     
     
 }
+
+.header-tienda a{
+    text-decoration: none;
+    color: white;
+}
+.header-tienda a:hover{
+    text-decoration: none;
+    color: orange;
+}
+
 .header-tienda-cliente header{
     background-color: #003A70;
     color: white;
@@ -732,6 +742,27 @@ body.login {
     font-size: 0.5em;
   }
 
+/* Gema, mi hoja de estilos css de el sobre nosotros del sprin2*/
+
+.sobrenosotros {
+    font-family: 'Tahoma, sans-serif';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+}
+.container_sobrenosotros {
+
+    max-width: 700px;
+    background-color: #f8f9fd;
+    border-radius: 25px;
+    padding: 25px 35px;
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: rgba(133, 192, 215, 0.878) 0px 30px 30px -20px;
+}
+
+/*fin sobre nosotros Gema */
+  
 /*
 .submit-registro {
   display: flex;
