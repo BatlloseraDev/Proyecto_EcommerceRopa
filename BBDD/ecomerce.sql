@@ -1,11 +1,14 @@
-/*DROP TABLE accesorios;
-DROP TABLE ropa;
+/*
+DROP TABLE pedido_linea;
 DROP TABLE pedido;
+DROP TABLE accesorios;
+DROP TABLE ropa;
 DROP TABLE producto;
 DROP TABLE administrador;
 DROP TABLE vendedor;
 DROP TABLE cliente;
-DROP TABLE usuario;*/
+DROP TABLE usuario;
+*/
 
 
 -- Tabla Usuarios
@@ -58,18 +61,8 @@ CREATE TABLE producto (
     id_producto NUMBER(5) PRIMARY KEY,
     id_vendedor NUMBER(5),
 	nombre VARCHAR2(30),
+    precio_unidad NUMBER(5),
 	CONSTRAINT fk_producto_vendedor FOREIGN KEY (id_vendedor) REFERENCES vendedor(id_vendedor)
-);
-
--- Tabla Pedidos
-CREATE TABLE pedido (
-    id_pedido NUMBER(5) GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    id_cliente NUMBER(5),
-    id_producto NUMBER(5),
-    cantidad NUMBER(5),
-    fecha_compra DATE,
-	CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente),
-	CONSTRAINT fk_pedido_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
 -- Tabla Ropa
@@ -92,4 +85,25 @@ CREATE TABLE accesorios (
     precio NUMBER(10,2),
     talla VARCHAR2(10),
 	CONSTRAINT fk_accesorios_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+);
+
+-- Tabla Pedido
+CREATE TABLE pedido (
+    id_pedido NUMBER(10) PRIMARY KEY,
+    id_cliente NUMBER(5),
+    fecha_compra DATE,
+	CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+);
+
+-- Tabla Pedido_linea
+CREATE TABLE pedido_linea (
+    id_pedido NUMBER(10),
+    linea_pedido NUMBER(3),
+    id_producto NUMBER(5),
+    cantidad NUMBER(5),
+    precio_unidad NUMBER(6,2),
+    precio_linea NUMBER(6,2),
+    CONSTRAINT pk_pedido_linea PRIMARY KEY (id_pedido,linea_pedido),
+	CONSTRAINT fk_pedido_linea_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+    CONSTRAINT fk_producto_linea_pedido FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
