@@ -21,7 +21,7 @@ CREATE TABLE usuario (
 );
 
 -- Tabla Cliente
-CREATE TABLE cliente ( --cambiar PK
+CREATE TABLE cliente ( 
     id_usuario NUMBER(5) PRIMARY KEY,
     nombre_CLIENTE VARCHAR2(30) NOT NULL,
     ape1 VARCHAR2(30),
@@ -34,7 +34,7 @@ CREATE TABLE cliente ( --cambiar PK
 );
 
 -- Tabla Vendedor
-CREATE TABLE vendedor ( --cambiar PK
+CREATE TABLE vendedor ( 
     id_usuario NUMBER(5) PRIMARY KEY,
     nombre_VENDEDOR VARCHAR2(30),
     ape1 varchar2(30),
@@ -45,7 +45,7 @@ CREATE TABLE vendedor ( --cambiar PK
 );
 
 -- Tabla Administrador
-CREATE TABLE administrador ( --cambiar PK
+CREATE TABLE administrador (
     id_usuario NUMBER(5) PRIMARY KEY,
     nombre_ADMIN VARCHAR2(50),
     DNI VARCHAR2(15) NOT NULL UNIQUE,
@@ -53,7 +53,7 @@ CREATE TABLE administrador ( --cambiar PK
 );
 
 -- Tabla Producto
-CREATE TABLE producto ( --cambiar precio
+CREATE TABLE producto (
     id_producto NUMBER(5) PRIMARY KEY,
     id_vendedor NUMBER(5),
 	nombre VARCHAR2(30),
@@ -62,15 +62,15 @@ CREATE TABLE producto ( --cambiar precio
 );
 
 -- Tabla Ropa
-CREATE TABLE ropa ( --cambiar precio, cambiar primary key, cambiar  talla
+CREATE TABLE ropa ( 
     id_producto NUMBER(5) PRIMARY KEY,
-    talla VARCHAR2(5) CHECK (talla IN ('XS', 'S', 'M', 'L', 'XL', 'XXL')), --dominio
+    talla VARCHAR2(5) CHECK (talla IN ('XS', 'S', 'M', 'L', 'XL', 'XXL')), 
     recio NUMBER(10,2) CHECK (precio >= 0),
 	CONSTRAINT fk_ropa_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
 -- Tabla Accesorios
-CREATE TABLE accesorios ( --cambiar precio, dominio
+CREATE TABLE accesorios ( 
     id_accesorio NUMBER(5) PRIMARY KEY,
     id_producto NUMBER(5),
     precio NUMBER(10,2) CHECK (precio >= 0),
