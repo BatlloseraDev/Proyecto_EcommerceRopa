@@ -1,9 +1,8 @@
 /*
-DROP TABLE pedido_linea_accesorio;
-DROP TABLE pedido_linea_prenda;
+DROP TABLE pedido_producto;
 DROP TABLE pedido;
-DROP TABLE accesorio;
-DROP TABLE prenda;
+DROP TABLE accesorios;
+DROP TABLE ropa;
 DROP TABLE producto;
 DROP TABLE administrador;
 DROP TABLE vendedor;
@@ -11,115 +10,98 @@ DROP TABLE cliente;
 DROP TABLE usuario;
 */
 
--- Tabla usuario
+
+-- Tabla Usuarios
 CREATE TABLE usuario (
     id_usuario NUMBER(5) PRIMARY KEY,
     nombre_usuario VARCHAR2(30) NOT NULL UNIQUE,
     email VARCHAR2(100),
-    contrasena VARCHAR2(25) NOT NULL,
+    contrasenia VARCHAR2(25),
     fecha_alta DATE
 );
 
--- Tabla cliente
-CREATE TABLE cliente (
+-- Tabla Cliente
+CREATE TABLE cliente ( 
     id_usuario NUMBER(5) PRIMARY KEY,
-	id_cliente NUMBER(5) NOT NULL UNIQUE,
-    nombre_cliente VARCHAR2(30) NOT NULL,
+    nombre_CLIENTE VARCHAR2(30) NOT NULL,
     ape1 VARCHAR2(30),
     ape2 VARCHAR2(30),
-    DNI VARCHAR2(15),
+    DNI VARCHAR2(15) NOT NULL UNIQUE,
     direccion VARCHAR2(200),
     telefono VARCHAR2(15),
-    email VARCHAR2(100),
     tarjeta VARCHAR2(20),
-	CONSTRAINT fk_cliente_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+	CONSTRAINT fk_cliente_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
--- Tabla vendedor
-CREATE TABLE vendedor (
-	id_usuario NUMBER(5) PRIMARY KEY,
-	id_vendedor NUMBER(5) NOT NULL UNIQUE,
-    nombre_vendedor VARCHAR2(30),
+-- Tabla Vendedor
+CREATE TABLE vendedor ( 
+    id_usuario NUMBER(5) PRIMARY KEY,
+    nombre_VENDEDOR VARCHAR2(30),
     ape1 varchar2(30),
     ape2 varchar2(30),
     comision NUMBER(10,2),
     CIF_NIF VARCHAR2(15) NOT NULL UNIQUE,
-	CONSTRAINT fk_vendedor_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+	CONSTRAINT fk_vendedor_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
--- Tabla administrador
+-- Tabla Administrador
 CREATE TABLE administrador (
-	id_usuario NUMBER(5) PRIMARY KEY,
-	id_administrador NUMBER(5) NOT NULL UNIQUE,
-    nombre_administrador VARCHAR2(30) NOT NULL,
-	ape1 varchar2(30),
-    ape2 varchar2(30),
+    id_usuario NUMBER(5) PRIMARY KEY,
+    nombre_ADMIN VARCHAR2(50),
     DNI VARCHAR2(15) NOT NULL UNIQUE,
-	numero_seguridad_social VARCHAR2(15) NOT NULL UNIQUE,
-	CONSTRAINT fk_administrador_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario)
+	CONSTRAINT fk_administrador_usuario FOREIGN KEY (id_usuario) REFERENCES usuario(id_usuario) ON DELETE CASCADE
 );
 
--- Tabla producto
+-- Tabla Producto
 CREATE TABLE producto (
     id_producto NUMBER(5) PRIMARY KEY,
     id_vendedor NUMBER(5),
-	nombre_producto VARCHAR2(50),
-	CONSTRAINT fk_producto_vendedor FOREIGN KEY (id_vendedor) REFERENCES vendedor(id_vendedor)
+	nombre VARCHAR2(30),
+    descripcion VARCHAR2(200),
+	CONSTRAINT fk_producto_vendedor FOREIGN KEY (id_vendedor) REFERENCES vendedor(id_usuario) 
 );
 
--- Tabla ropa
-CREATE TABLE prenda (
-	id_producto NUMBER(5),
-    id_prenda NUMBER(5),
-    nombre_prenda VARCHAR2(30),
-    descripcion_prenda VARCHAR2(200),
-    talla_prenda VARCHAR2(10),
-    precio_unidad_prenda NUMBER(10,2),
-	CONSTRAINT pk_prenda PRIMARY KEY (id_producto,id_prenda),
-	CONSTRAINT fk_prenda_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+-- Tabla Ropa
+CREATE TABLE ropa ( 
+    id_producto NUMBER(5) PRIMARY KEY,
+    talla VARCHAR2(5) CHECK (talla IN ('XS', 'S', 'M', 'L', 'XL', 'XXL')), 
+    precio NUMBER(10,2) CHECK (precio >= 0),
+	CONSTRAINT fk_ropa_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
--- Tabla accesorios
-CREATE TABLE accesorio (
+-- Tabla Accesorios
+CREATE TABLE accesorios ( 
+    id_accesorio NUMBER(5) PRIMARY KEY,
     id_producto NUMBER(5),
-	id_accesorio NUMBER(5),
-    nombre_accesorio VARCHAR2(30),
-    descripcion_accesorio VARCHAR2(200),
-	talla_accesorio VARCHAR2(10),
-    precio_unidad_accesorio NUMBER(10,2),
-	CONSTRAINT pk_ropa PRIMARY KEY (id_producto,id_accesorio),
+    precio NUMBER(10,2) CHECK (precio >= 0),
 	CONSTRAINT fk_accesorios_producto FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
--- Tabla pedido
+-- Tabla Pedido
 CREATE TABLE pedido (
-    id_pedido NUMBER(5) GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    id_pedido NUMBER(10) PRIMARY KEY,
     id_cliente NUMBER(5),
-    fecha_pedido DATE,
-	CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_cliente)
+    fecha_compra DATE DEFAULT SYSDATE,
+	CONSTRAINT fk_pedido_cliente FOREIGN KEY (id_cliente) REFERENCES cliente(id_usuario)
 );
 
-CREATE TABLE pedido_linea_prenda (
-    id_pedido NUMBER(5),
-	id_producto NUMBER(5),
-    id_prenda NUMBER(5),
-    cantidad NUMBER(5),
-	precio_unidad NUMBER(6,2),
-    precio_linea NUMBER(6,2),
-	CONSTRAINT pk_pedido_linea_prenda PRIMARY KEY (id_pedido,id_producto,id_prenda),
-	CONSTRAINT fk_pedido_linea_prenda_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
-    CONSTRAINT fk_pedido_linea_prenda_prenda FOREIGN KEY (id_producto,id_prenda) REFERENCES prenda(id_producto,id_prenda)
+-- Tabla Pedido_linea
+--CREATE TABLE pedido_producto ( 
+    --id_pedido NUMBER(10),
+   -- id_producto NUMBER(5),
+   -- cantidad NUMBER(5) CHECK (cantidad > 0),
+    --CONSTRAINT pk_pedido_linea PRIMARY KEY (id_pedido,id_producto),
+	--CONSTRAINT fk_pedido_linea_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+    --CONSTRAINT fk_producto_linea_pedido FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
+--);
+-- Tabla Pedido_producto
+CREATE TABLE pedido_producto ( 
+    id_pedido NUMBER(10),
+    id_producto NUMBER(5),
+    cantidad NUMBER(5) CHECK (cantidad > 0),
+    CONSTRAINT pk_pedido_producto PRIMARY KEY (id_pedido,id_producto),
+	CONSTRAINT fk_pedido_producto_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+    CONSTRAINT fk_producto_producto_pedido FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
-CREATE TABLE pedido_linea_accesorio (
-    id_pedido NUMBER(5),
-	id_producto NUMBER(5),
-    id_accesorio NUMBER(5),
-    cantidad NUMBER(5),
-	precio_unidad NUMBER(6,2),
-    precio_linea NUMBER(6,2),
-	CONSTRAINT pk_pedido_linea_accesorio PRIMARY KEY (id_pedido,id_producto,id_accesorio),
-	CONSTRAINT fk_pedido_linea_accesorio_pedido FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
-    CONSTRAINT fk_pedido_linea_accesorio_accesorio FOREIGN KEY (id_producto,id_accesorio) REFERENCES accesorio(id_producto,id_accesorio)
-);
 
