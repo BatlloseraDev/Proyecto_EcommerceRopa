@@ -46,24 +46,30 @@ VALUES (21, 'Admin Logística', '88999000G');
 --PRODUCTO
 
 INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
-VALUES (6, 17, 'Sudadera capucha', 'Sudadera con capucha de algodón orgánico');
+VALUES (11, 17, 'Sudadera capucha', 'Sudadera con capucha de algodón orgánico');
 
 INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
-VALUES (7, 5, 'Pulsera cuero', 'Pulsera artesanal de cuero genuino');
+VALUES (12, 19, 'Pulsera cuero', 'Pulsera artesanal de cuero genuino');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (13, 17, 'Camiseta Premium', 'Camiseta con diseño premium');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (14, 19, 'One Piece', 'Literalmente es una pieza de algo');
 
 --ROPA
 INSERT INTO ropa (id_producto, talla, precio) 
-VALUES (8, 'L', 45.99);
+VALUES (11, 'L', 45.99);
 
 INSERT INTO ropa (id_producto, talla, precio) 
-VALUES (9, 'S', 32.50);
+VALUES (13, 'S', 32.50);
 
 --ACCESORIOS
 INSERT INTO accesorios (id_accesorio, id_producto, precio) 
-VALUES (6, 7, 28.50);
+VALUES (6, 12, 28.50);
 
 INSERT INTO accesorios (id_accesorio, id_producto, precio) 
-VALUES (7, 11, 75.00);
+VALUES (7, 14, 75.00);
 
 --PEDIDO
 
