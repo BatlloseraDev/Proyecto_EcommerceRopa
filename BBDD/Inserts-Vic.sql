@@ -113,6 +113,21 @@ VALUES (4, 9, 'Vestido verano', 'Vestido ligero para días calurosos');
 INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
 VALUES (5, 10, 'Reloj madera', 'Reloj de pulsera con correa de madera');
 
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (6, 5, 'Vestido invierno', 'Vestido para días invernales');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (7, 11, 'Falda escocesa', 'Falda para hombres de verdad');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (8, 10, 'Navaja', 'Para un apuñalamiento entre colegas');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (9, 2, 'Gafas de sol', 'Horteras como ellas solas pero la nueva moda');
+
+INSERT INTO producto (id_producto, id_vendedor, nombre, descripcion) 
+VALUES (10, 11, 'Lagrima Postiza', 'Hay quien le gusta');
+
 --ROPA
 
 INSERT INTO ropa (id_producto, talla, precio) 
