@@ -15,7 +15,36 @@ VALUES (4, 'cliente2', 'cliente2@email.com', 'pass5678', TO_DATE('2023-03-05', '
 INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
 VALUES (5, 'vendedor2', 'vendedor2@tienda.com', 'vend456', TO_DATE('2023-04-12', 'YYYY-MM-DD'));
 
---me quedan agregar hasta el 11 que he estan abajo
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (6, 'cliente3', 'cliente3@email.com', 'pass456', TO_DATE('2023-04-25', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (7, 'cliente4', 'cliente4@email.com', 'client4_123', TO_DATE('2023-01-10', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (8, 'cliente5', 'cliente5@email.com', 'client5_456', TO_DATE('2020-06-15', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (9, 'vendedor3', 'vendedor3@tienda.com', 'vend3_456', TO_DATE('2022-09-20', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (10, 'vendedor4', 'vendedor4@tienda.com', 'vend4_456', TO_DATE('2023-04-12', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (11, 'vendedor5', 'vendedor5@tienda.com', 'vend5_456', TO_DATE('2023-04-12', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (12, 'admin2', 'admin2@tienda.com', 'admin2_123', TO_DATE('2020-07-19', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (13, 'admin3', 'admin3@tienda.com', 'admin3_123', TO_DATE('2020-01-01', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (14, 'admin4', 'admin4@tienda.com', 'admin4_123', TO_DATE('2019-09-30', 'YYYY-MM-DD'));
+
+INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
+VALUES (15, 'admin5', 'admin5@tienda.com', 'admin5_123', TO_DATE('2024-05-10', 'YYYY-MM-DD'));
+
 
 
 -- CLIENTE
