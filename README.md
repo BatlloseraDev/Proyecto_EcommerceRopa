@@ -55,11 +55,11 @@ Proyecto_EcommerceRopa/
 │ ├── css/   
 │ ├── js/   
 │ └── img/ (imágenes,iconos)   
-└── Docs/  
-      └── Modelos  Relacionales/   
-            ├── Model Modelo Relacional.pdf   
-            ├── Modelo relacional DrawSQL.pdf 
-            └── Modelo SQL developer.pdf
+└── Docs/    
+      └── Modelos  Relacionales/    
+            ├── Model Modelo Relacional.pdf    
+            ├── Modelo relacional DrawSQL.pdf    
+            └── Modelo SQL developer.pdf    
             
 ---
 
