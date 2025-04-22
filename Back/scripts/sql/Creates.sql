@@ -9,7 +9,7 @@ DROP TABLE vendedor;
 DROP TABLE cliente;
 DROP TABLE usuario;
 */
-
+-- ++++++ CREATES ++++++++ ------
 
 -- Tabla Usuarios
 CREATE TABLE usuario (
@@ -104,4 +104,26 @@ CREATE TABLE pedido_producto (
     CONSTRAINT fk_producto_producto_pedido FOREIGN KEY (id_producto) REFERENCES producto(id_producto)
 );
 
+CREATE SEQUENCE usuario_seq --para creacion de usuarios
+START WITH 1 
+INCREMENT BY 1 
+NOCACHE 
+NOCYCLE;
 
+CREATE SEQUENCE producto_seq --para creacion de productos
+START WITH 1 
+INCREMENT BY 1 
+NOCACHE 
+NOCYCLE;
+
+CREATE SEQUENCE accesorio_seq --para creacion de accesorios
+START WITH 1 
+INCREMENT BY 1 
+NOCACHE 
+NOCYCLE;
+
+CREATE SEQUENCE pedido_seq --para creacion de pedidos
+START WITH 1001 
+INCREMENT BY 1 
+NOCACHE 
+NOCYCLE;

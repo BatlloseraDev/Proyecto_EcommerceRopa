@@ -22,13 +22,13 @@ document.addEventListener("DOMContentLoaded", function(){
         };
 
         if(email === userDataAdmin.email && password === userDataAdmin.password){
-            window.location.href="htmls/interfazAdmin.html";
+            window.location.href="html/interfazAdmin.html";
         }
         else if(email === userDataVendedor.email && password === userDataVendedor.password){
-            window.location.href="htmls/vendedor.html";
+            window.location.href="html/vendedor.html";
         }
         else if(email === userDataUser.email && password === userDataUser.password){
-            window.location.href="htmls/cliente.html";
+            window.location.href="html/cliente.html";
         }
         else{
             document.getElementById("error-message").style.display = "block"; 
