@@ -50,13 +50,13 @@ INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta)
 VALUES (usuario_seq.NEXTVAL, 'admin5', 'admin5@tienda.com', 'admin5_123', TO_DATE('2024-05-10', 'YYYY-MM-DD'));
 
 INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
-VALUES (usuario_seq.NEXTVAL, 'cliente3', 'cliente3@email.com', 'clientePass3', TO_DATE('2023-08-10', 'YYYY-MM-DD'));
+VALUES (usuario_seq.NEXTVAL, 'cliente6', 'cliente6@email.com', 'clientePass3', TO_DATE('2023-08-10', 'YYYY-MM-DD'));
 
 INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
-VALUES (usuario_seq.NEXTVAL, 'vendedor3', 'vendedor3@tienda.com', 'vendPass3', TO_DATE('2023-09-05', 'YYYY-MM-DD'));
+VALUES (usuario_seq.NEXTVAL, 'vendedor6', 'vendedor6@tienda.com', 'vendPass3', TO_DATE('2023-09-05', 'YYYY-MM-DD'));
 
 INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
-VALUES (usuario_seq.NEXTVAL, 'vendedor3', 'vendedor3@tienda.com', 'vendPass3', TO_DATE('2023-09-05', 'YYYY-MM-DD'));
+VALUES (usuario_seq.NEXTVAL, 'vendedor7', 'vendedor7@tienda.com', 'vendPass3', TO_DATE('2023-09-05', 'YYYY-MM-DD'));
 
 INSERT INTO usuario (id_usuario, nombre_usuario, email, contrasenia, fecha_alta) 
 VALUES (usuario_seq.NEXTVAL, 'Pablo Santos', 'PabloSantos@cliente.com', 'su1234', TO_DATE('2023-09-08', 'YYYY-MM-DD'));
