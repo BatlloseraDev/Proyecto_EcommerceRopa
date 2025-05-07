@@ -32,6 +32,8 @@ class LogInController {
                     
                 }
                 else println("Las contraseñas no coinciden")
+            }else{
+                println("Cuenta no existente")
             }
         }
 
