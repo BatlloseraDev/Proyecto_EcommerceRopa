@@ -4,12 +4,16 @@ import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
-import com.ejercicio.proyecto_ecommerce.AccesoDatos.UsuarioDAOImpl
+import com.ejercicio.proyecto_ecommerce.AccesoDatos.*
 import com.ejercicio.proyecto_ecommerce.tablas.Usuario
 
 class LogInController {
 
     private val daoUsuario= UsuarioDAOImpl()
+    private val daoAdmin= AdminDAOImpl()
+    private val daoVendedor= VendedorDAOImpl()
+    private val daoCliente= ClienteDAOImpl()
+
 
 
     @FXML
@@ -31,10 +35,12 @@ class LogInController {
                     cargarVentanaCorrespondiente(tipo)
                     
                 }
-                else println("Las contraseñas no coinciden")
+                else println("Las contraseñas no coinciden") //sustituir por un alert o algo que avise al usuario
             }else{
-                println("Cuenta no existente")
+                println("Cuenta no existente")//sustituir por un alert o algo que avise al usuario
             }
+        }else{
+            println("Campos vacios")//sustituir por un alert o algo que avise al usuario
         }
 
     }
@@ -56,14 +62,23 @@ class LogInController {
     }
 
     fun comprobarTipoUsuario(usuario: Usuario):Int{
-        //aqui se tendría que hacer los calculos para saber que tipo de usuario es para moverlo a la
-        //pantalla correspondiente
-        return 1
+
+        var tipo = 0
+
+        /*realmente esto es ineficiente deberíamos hacer que la clase usuario
+        * sea padre y el resto hijos y apartir de ahi controlar las listas
+        * correctamente, pero no tenemos tiempo para poder implementar esto.*/
+
+        if(daoCliente.getClientePorID(usuario.id_usuario)!=null) tipo=1
+        else if(daoVendedor.getVendedorByID(usuario.id_usuario) != null) tipo=2
+        else if(daoAdmin.getAdminByID(usuario.id_usuario) != null) tipo = 3
+
+        return tipo
     }
     fun cargarVentanaCorrespondiente(ventana: Int){
         when(ventana){
             1-> {
-                //cargar ventana cliente con los datos del usuario
+                //cargar ventana cliente con los datos del cliente.
             }
             2->{
                 //cargar venana vendedor con los datos del vendedor
