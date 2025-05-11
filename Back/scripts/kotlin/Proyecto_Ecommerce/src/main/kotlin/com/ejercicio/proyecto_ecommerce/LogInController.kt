@@ -79,12 +79,15 @@ class LogInController {
         when(ventana){
             1-> {
                 //cargar ventana cliente con los datos del cliente.
+                println("ventana cliente")
             }
             2->{
                 //cargar venana vendedor con los datos del vendedor
+                println("ventana vendedor")
             }
             3->{
                 //cargar ventana administrador con los datos del administrador
+                println("ventana administrador")
             }
             else->{
                 println("Error al cargar la ventana")

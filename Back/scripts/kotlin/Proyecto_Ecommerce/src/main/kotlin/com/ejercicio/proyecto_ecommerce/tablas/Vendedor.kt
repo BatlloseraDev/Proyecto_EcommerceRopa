@@ -1,6 +1,6 @@
 package com.ejercicio.proyecto_ecommerce.tablas
 
-class Vendedor(val id_usuario: Int, val nombre_vendedor:String,val ape1:String, val ape2:String, val CIF_NIF:String){
+class Vendedor(val id_usuario: Int, val nombre_vendedor:String,val ape1:String, val ape2:String?, val CIF_NIF:String){
 
 
     override fun toString(): String {

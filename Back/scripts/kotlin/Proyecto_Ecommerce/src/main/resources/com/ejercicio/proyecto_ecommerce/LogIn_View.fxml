@@ -7,10 +7,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="364.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.proyecto_ecommerce.LogInController">
    <children>
-       <Button layoutX="117.0" layoutY="238.0" onAction="#onBtnIniciarSesion" prefHeight="25.0" prefWidth="213.0" text="Iniciar Sesión" />
+       <Button defaultButton="true" layoutX="117.0" layoutY="238.0" onAction="#onBtnIniciarSesion" prefHeight="25.0" prefWidth="213.0" text="Iniciar Sesión" />
       <Button layoutX="117.0" layoutY="276.0" onAction="#onBtnRegistrarme" prefHeight="25.0" prefWidth="213.0" text="Registrarme" />
       <Label layoutX="120.0" layoutY="62.0" text="Inicio Sesión" textAlignment="CENTER" textFill="#004dc4">
          <font>

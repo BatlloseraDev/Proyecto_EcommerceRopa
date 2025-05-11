@@ -16,7 +16,7 @@ class ClienteDAOImpl: ClienteDAO {
         val rs= ps?.executeQuery()
         var cliente: Cliente? =null
         if(rs?.next() == true){
-            cliente = Cliente(rs.getInt("id_usuario"),rs.getString("nombre"),rs.getString("ape1"),
+            cliente = Cliente(rs.getInt("id_usuario"),rs.getString("nombre_cliente"),rs.getString("ape1"),
                 rs.getString("ape2"),rs.getString("dni"),rs.getString("direccion"),rs.getString("telefono"),rs.getString("tarjeta"))
         }
         ps?.close()
