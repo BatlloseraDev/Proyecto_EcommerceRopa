@@ -29,7 +29,7 @@ class ProductoDAOImpl:ProductoDAO {
         return productos
     }
 
-    override fun getProductoByIdVendedor(vendedor: Vendedor): Producto {
+    override fun getProductoByIdVendedor(idVendedor:Int): List<Producto> {
         TODO("Not yet implemented")
     }
 

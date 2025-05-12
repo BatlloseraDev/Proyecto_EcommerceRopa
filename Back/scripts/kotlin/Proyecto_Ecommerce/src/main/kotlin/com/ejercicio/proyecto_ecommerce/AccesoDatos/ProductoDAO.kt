@@ -5,5 +5,5 @@ import com.ejercicio.proyecto_ecommerce.tablas.Vendedor
 
 interface ProductoDAO {
     fun getNombreDescripcion(): List<Producto>
-    fun getProductoByIdVendedor(vendedor: Vendedor):Producto
+    fun getProductoByIdVendedor(idVendedor:Int):List<Producto>
 }
