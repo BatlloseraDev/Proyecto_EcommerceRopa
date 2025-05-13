@@ -9,9 +9,6 @@ class UsuarioDAOImpl:UsarioDAO {
     private val conexion = ConexionDB()
 
 
-
-
-
     override fun getUsuarioPorID(id: Int): Usuario? {
         conexion.conectar()
 
