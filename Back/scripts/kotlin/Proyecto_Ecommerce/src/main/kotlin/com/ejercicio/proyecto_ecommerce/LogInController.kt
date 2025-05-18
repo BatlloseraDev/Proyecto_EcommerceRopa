@@ -6,6 +6,10 @@ import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
 import com.ejercicio.proyecto_ecommerce.AccesoDatos.*
 import com.ejercicio.proyecto_ecommerce.tablas.Usuario
+import javafx.fxml.FXMLLoader
+import javafx.scene.Parent
+import javafx.scene.Scene
+import javafx.stage.Stage
 
 class LogInController {
 
@@ -84,6 +88,20 @@ class LogInController {
             2->{
                 //cargar venana vendedor con los datos del vendedor
                 println("ventana vendedor")
+                try {
+                    val loader =
+                        FXMLLoader(
+                            VendedorController::class.java.getResource
+                                ("com.ejercicio.proyecto_ecommerce/Vendedor_View.fxml")
+                        )
+                    val root: Parent = loader.load()
+                    val stage = Stage()
+                    stage.title = "Vendedor"
+                    stage.scene = Scene(root)
+                    stage.show()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
             3->{
                 //cargar ventana administrador con los datos del administrador
