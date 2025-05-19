@@ -17,8 +17,6 @@
 
         <TextField fx:id="usuarioSeleccionadoTextField" layoutX="24.0" layoutY="120.0" editable="false" promptText="Email del usuario" />
 
-        <Label layoutX="24.0" layoutY="160.0" text="Fecha de alta:" />
-        <Label fx:id="fechaLabel" layoutX="120.0" layoutY="160.0" text="" />
 
         <Button fx:id="salirButton" layoutX="24.0" layoutY="210.0" mnemonicParsing="false" text="Salir" />
     </children>
