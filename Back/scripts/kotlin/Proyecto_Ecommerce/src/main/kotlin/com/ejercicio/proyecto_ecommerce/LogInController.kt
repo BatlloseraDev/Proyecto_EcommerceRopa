@@ -103,6 +103,20 @@ class LogInController {
             2->{
                 //cargar venana vendedor con los datos del vendedor
                 println("ventana vendedor")
+                try {
+                    val loader =
+                        FXMLLoader(
+                            VendedorController::class.java.getResource
+                                ("com.ejercicio.proyecto_ecommerce/Vendedor_View.fxml")
+                        )
+                    val root: Parent = loader.load()
+                    val stage = Stage()
+                    stage.title = "Vendedor"
+                    stage.scene = Scene(root)
+                    stage.show()
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
             }
             3->{
                 //cargar ventana administrador con los datos del administrador
