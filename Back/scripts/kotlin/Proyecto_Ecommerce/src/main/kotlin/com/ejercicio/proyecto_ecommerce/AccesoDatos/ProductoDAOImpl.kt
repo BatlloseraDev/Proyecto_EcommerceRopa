@@ -9,7 +9,11 @@ import com.ejercicio.proyecto_ecommerce.tablas.Vendedor
 
 class ProductoDAOImpl:ProductoDAO {
     private val conexion = ConexionDB()
+
+
     val productos = mutableListOf<Producto>()
+
+
     override fun getNombreDescripcion(): List<Producto> {
         try {
             conexion.conectar()
@@ -17,7 +21,7 @@ class ProductoDAOImpl:ProductoDAO {
             val rs= st?.executeQuery(SQL_Producto.getNombreDescripcion)
 
             while(rs?.next() == true){
-                val producto = Producto(rs.getInt("id_usuario"),rs.getInt("id_vendedor"),rs.getString("nombre"),rs.getString("descripcion"))
+                val producto = Producto(rs.getInt("id_producto"),rs.getInt("id_vendedor"),rs.getString("nombre"),rs.getString("descripcion"))
                 productos.add(producto)
             }
             st?.close()

@@ -85,18 +85,16 @@ class LogInController {
                 //cargar ventana cliente con los datos del cliente.
                 println("ventana cliente")
                 try {
-                    val loader =
-                        FXMLLoader(
-                            ClienteController::class.java.getResource
-                                ("/com.ejercicio.proyecto_ecommerce/Cliente-View.fxml")
-                        )
+                    val loader = FXMLLoader(ClienteController::class.java.getResource("Cliente_View.fxml"))
                     val root: Parent = loader.load()
                     val stage = Stage()
                     stage.title = "Cliente"
                     stage.scene = Scene(root)
                     stage.show()
                 } catch (e: Exception) {
-                    e.printStackTrace()
+
+                    println("El error es ${e.message}")
+                    //e.printStackTrace()
                 }
 
             }
@@ -107,7 +105,7 @@ class LogInController {
                     val loader =
                         FXMLLoader(
                             VendedorController::class.java.getResource
-                                ("com.ejercicio.proyecto_ecommerce/Vendedor_View.fxml")
+                                ("Vendedor_View.fxml")
                         )
                     val root: Parent = loader.load()
                     val stage = Stage()
@@ -126,7 +124,7 @@ class LogInController {
                     val loader =
                         FXMLLoader(
                             AdminController::class.java.getResource
-                                ("com.ejercicio.proyecto_ecommerce/Admin_View.fxml")
+                                ("Admin_View.fxml")
                         )
                     val root: Parent = loader.load()
                     val stage = Stage()

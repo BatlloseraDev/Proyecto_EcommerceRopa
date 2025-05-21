@@ -4,10 +4,13 @@ import com.ejercicio.proyecto_ecommerce.AccesoDatos.ProductoDAOImpl
 import com.ejercicio.proyecto_ecommerce.tablas.Producto
 import javafx.application.Platform
 import javafx.collections.FXCollections
+import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
+import javafx.scene.Node
 import javafx.scene.control.ComboBox
 import javafx.scene.control.TextField
+import javafx.stage.Stage
 import java.net.URL
 import java.util.*
 
@@ -44,7 +47,14 @@ class VendedorController:Initializable {
     }
 
     @FXML
-    private fun comprarProducto() {
+    fun onSalirPressed(event: ActionEvent) {
+        val nodo = event.source as Node
+        val ventana = nodo.scene.window as Stage
+        ventana.close()
+    }
+
+    @FXML
+    fun onVenderPressed(event: ActionEvent) {
         val producto = productosComboBox.selectionModel.selectedItem
         producto?.let {
             println("Comprando el producto: ${it.nombre}")
@@ -52,10 +62,7 @@ class VendedorController:Initializable {
         }
     }
 
-    @FXML
-    private fun salir() {
 
-        println("Saliendo de la aplicación.")
-        Platform.exit()
-    }
+
+
 }

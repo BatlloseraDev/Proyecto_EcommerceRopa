@@ -4,10 +4,13 @@ import com.ejercicio.proyecto_ecommerce.AccesoDatos.ProductoDAOImpl
 import com.ejercicio.proyecto_ecommerce.tablas.Producto
 import javafx.application.Platform
 import javafx.collections.FXCollections
+import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
+import javafx.scene.Node
 import javafx.scene.control.ComboBox
 import javafx.scene.control.TextField
+import javafx.stage.Stage
 import java.net.URL
 import java.util.ResourceBundle
 
@@ -25,25 +28,32 @@ class ClienteController: Initializable {
 
         productosComboBox.setOnAction {
             val productoSeleccionado = productosComboBox.selectionModel.selectedItem
-            productoSeleccionado?.let {
-                productoSeleccionadoTextField.text = it.nombre
+
+
+            if(productoSeleccionado!=null) {
+                productoSeleccionadoTextField.text = productoSeleccionado.nombre
             }
+
         }
     }
 
     private fun cargarProductos() {
         try {
+
             val listaProductos = productoDAO.getNombreDescripcion()
             val productosObservableList = FXCollections.observableList(listaProductos)
             productosComboBox.items = productosObservableList
+
+
         } catch (e: Exception) {
             e.printStackTrace()
             println("Error al cargar los productos: ${e.message}")
         }
     }
 
+
     @FXML
-    private fun comprarProducto() {
+    fun onComprarPressed(event: ActionEvent) {
         val producto = productosComboBox.selectionModel.selectedItem
         producto?.let {
             println("Comprando el producto: ${it.nombre}")
@@ -51,10 +61,12 @@ class ClienteController: Initializable {
         }
     }
 
-    @FXML
-    private fun salir() {
 
-        println("Saliendo de la aplicación.")
-        Platform.exit()
+    @FXML
+    fun onSalirPressed(event: ActionEvent) {
+        val nodo = event.source as Node
+        val ventana = nodo.scene.window as Stage
+        ventana.close()
     }
+
 }
