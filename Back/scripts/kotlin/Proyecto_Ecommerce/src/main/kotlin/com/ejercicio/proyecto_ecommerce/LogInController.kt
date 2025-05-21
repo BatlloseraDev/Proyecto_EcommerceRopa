@@ -95,8 +95,6 @@ class LogInController {
         }
     }
 
-
-
     @FXML
     fun onBtnRegistrarme(event: ActionEvent) {
         //cambiar a la ventana de registro

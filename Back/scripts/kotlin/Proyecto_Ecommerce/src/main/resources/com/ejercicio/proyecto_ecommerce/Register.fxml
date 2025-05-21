@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.proyecto_ecommerce.RegistroController">
+    <children>
+        <Label layoutX="120.0" layoutY="40.0" text="Registro" textAlignment="CENTER" textFill="#004dc4">
+            <font>
+                <Font name="Times New Roman Bold" size="36.0" />
+            </font>
+        </Label>
+
+        <TextField fx:id="txtNombre" layoutX="117.0" layoutY="100.0" prefHeight="25.0" prefWidth="225.0" promptText="Nombre completo" />
+        <TextField fx:id="txtCorreo" layoutX="117.0" layoutY="140.0" prefHeight="25.0" prefWidth="225.0" promptText="correo@example.com" />
+        <PasswordField fx:id="pwContra" layoutX="117.0" layoutY="180.0" prefHeight="25.0" prefWidth="225.0" promptText="Contraseña" />
+
+        <Button layoutX="117.0" layoutY="270.0" onAction="#onBtnRegistrarse" prefHeight="25.0" prefWidth="225.0" text="Registrarse" />
+        <Button layoutX="117.0" layoutY="310.0" onAction="#onBtnVolver" prefHeight="25.0" prefWidth="225.0" text="Volver al inicio" />
+    </children>
+</AnchorPane>
