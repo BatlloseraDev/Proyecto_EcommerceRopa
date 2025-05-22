@@ -20,14 +20,23 @@ Bienvenido/a al repositorio del **Proyecto Ecommerce Ropa**, una plataforma de c
 2. **Descomprimir el Proyecto**  
    Extrae el contenido del archivo descargado en una carpeta de tu preferencia.
 
-3. **Configurar la Base de Datos**  
-   - Ubica los scripts SQL en la carpeta:  
-     `Back/scripts/sql/`
-   - **Ejecuta en este orden**:
-     1. `create.sql`: Crea las tablas y estructura de la base de datos.
-     2. `cargaInicial.sql`: Inserta datos iniciales para pruebas.
-
-4. **Consultas de Ejemplo**  
+3. **Configurar la Base de Datos**
+   - Abre XAMPP
+     1. Si no no lo tienes descargado dirigete a [XAMPP LINK](https://www.apachefriends.org/es/index.html) y descarga e instala la ultima versión para tu sistema operativo.
+     2. Una vez instalado dale start a los modulos de Apache y MySQL consecutivamente
+     3. Dale a 'Admin' del modulo de MySQL
+     4. En la ventana que se acaba de abrir, en la barra lateral darle a nueva
+     5. En el nombre de la base de datos poner literalmente "proyectoecommerce" y darle a crear
+     6. Una vez que este creada situate en ella dandole click a la base de datos de proyectoecommerce.
+     7. Dale a importar
+     8. Importa los scripts sqls en este orden. 1 `create.sql`, 2 `insert.sql`.
+        - Ubica los scripts SQL en la carpeta:  
+           `Back/scripts/sql/PHPMyAdmin`
+        - **Importa en este orden**:
+            1. `create.sql`: Crea las tablas y estructura de la base de datos.
+            2. `insert.sql`: Inserta datos iniciales para pruebas.
+     9. Ya tendrías la base de datos configurada
+4. **Inicial el programa**  
    En la carpeta `consultas` encontrarás ejemplos de consultas SQL realizadas por el equipo para validar el funcionamiento de la base de datos.
 
 ---
@@ -37,30 +46,15 @@ Bienvenido/a al repositorio del **Proyecto Ecommerce Ropa**, una plataforma de c
 - **Frontend**: Navega a la carpeta `Front` y abre los archivos HTML en tu navegador para explorar la interfaz del sitio web.
 - **Funcionalidades Actuales**:
   - Catálogo de productos.
-  - Interfaz básica de navegación (en desarrollo).
+  - Interfaz básica de navegación.
   - Estructura inicial de la base de datos.
+  - Conexion a base de datos local
+  - Interfaz en JAVAFX
+  - LogIng de distintos usuarios
 
 ---
 
-## 📂 Estructura del Proyecto
-Proyecto_EcommerceRopa/   
-├── Back/   
-│ └── scripts/   
-│      └── sql/   
-│           └── create.sql   
-│           ├── cargaInicial.sql   
-│           └── consultas/   
-├── Front/   
-│ ├── index.html   
-│ ├── css/   
-│ ├── js/   
-│ └── img/ (imágenes,iconos)   
-└── Docs/    
-      └── Modelos  Relacionales/    
-            ├── Model Modelo Relacional.pdf    
-            ├── Modelo relacional DrawSQL.pdf    
-            └── Modelo SQL developer.pdf    
-            
+
 ---
 
 ## 🛠️ Futuras Actualizaciones
