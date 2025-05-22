@@ -7,4 +7,10 @@ module com.ejercicio.proyecto_ecommerce {
 
     opens com.ejercicio.proyecto_ecommerce to javafx.fxml;
     exports com.ejercicio.proyecto_ecommerce;
+
+    opens com.ejercicio.proyecto_ecommerce.presentacion to javafx.fxml;
+    exports com.ejercicio.proyecto_ecommerce.presentacion to javafx.fxml;
+
+
+
 }

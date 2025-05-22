@@ -1,4 +1,4 @@
-package com.ejercicio.proyecto_ecommerce.Utilidades
+package com.ejercicio.proyecto_ecommerce.utilidades
 
 object SQL_Producto {
     const val getNombreDescripcion = "SELECT * FROM producto"

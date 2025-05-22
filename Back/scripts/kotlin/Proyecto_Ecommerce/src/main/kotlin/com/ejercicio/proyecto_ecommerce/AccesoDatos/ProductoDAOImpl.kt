@@ -1,11 +1,8 @@
-package com.ejercicio.proyecto_ecommerce.AccesoDatos
+package com.ejercicio.proyecto_ecommerce.accesoDatos
 
-import com.ejercicio.proyecto_ecommerce.Utilidades.ConexionDB
-import com.ejercicio.proyecto_ecommerce.Utilidades.SQL_Producto
-import com.ejercicio.proyecto_ecommerce.Utilidades.SQL_Users
-import com.ejercicio.proyecto_ecommerce.tablas.Producto
-import com.ejercicio.proyecto_ecommerce.tablas.Usuario
-import com.ejercicio.proyecto_ecommerce.tablas.Vendedor
+import com.ejercicio.proyecto_ecommerce.utilidades.ConexionDB
+import com.ejercicio.proyecto_ecommerce.utilidades.SQL_Producto
+import com.ejercicio.proyecto_ecommerce.negocio.Producto
 
 class ProductoDAOImpl:ProductoDAO {
     private val conexion = ConexionDB()

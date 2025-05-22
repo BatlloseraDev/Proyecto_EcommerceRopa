@@ -1,4 +1,4 @@
-package com.ejercicio.proyecto_ecommerce.tablas
+package com.ejercicio.proyecto_ecommerce.negocio
 
 class Administrador(val id_usuario: Int, val nombre_admin:String, val dni:String) {
 

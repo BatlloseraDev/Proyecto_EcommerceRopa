@@ -1,4 +1,4 @@
-package com.ejercicio.proyecto_ecommerce.tablas
+package com.ejercicio.proyecto_ecommerce.negocio
 
 class Vendedor(val id_usuario: Int, val nombre_vendedor:String,val ape1:String, val ape2:String?, val CIF_NIF:String){
 

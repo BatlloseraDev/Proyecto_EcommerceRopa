@@ -1,6 +1,6 @@
-package com.ejercicio.proyecto_ecommerce.AccesoDatos
+package com.ejercicio.proyecto_ecommerce.accesoDatos
 
-import com.ejercicio.proyecto_ecommerce.tablas.Usuario
+import com.ejercicio.proyecto_ecommerce.negocio.Usuario
 
 interface UsarioDAO {
     fun getUsuarioPorID(id:Int):Usuario?

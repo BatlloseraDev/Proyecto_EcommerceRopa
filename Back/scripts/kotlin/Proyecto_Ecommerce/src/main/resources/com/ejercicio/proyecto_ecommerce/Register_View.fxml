@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.proyecto_ecommerce.RegistroController">
+<AnchorPane prefHeight="400.0" prefWidth="460.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ejercicio.proyecto_ecommerce.presentacion.RegisterController">
     <children>
         <Label layoutX="120.0" layoutY="40.0" text="Registro" textAlignment="CENTER" textFill="#004dc4">
             <font>

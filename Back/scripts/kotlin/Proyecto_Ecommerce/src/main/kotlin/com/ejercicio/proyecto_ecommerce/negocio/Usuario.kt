@@ -1,4 +1,4 @@
-package com.ejercicio.proyecto_ecommerce.tablas
+package com.ejercicio.proyecto_ecommerce.negocio
 
 class Usuario(val id_usuario: Int, val nombre_usuario: String, val email: String, val contrasenia: String, val fecha_alta: String) {
 

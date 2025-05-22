@@ -1,7 +1,6 @@
-package com.ejercicio.proyecto_ecommerce.AccesoDatos
+package com.ejercicio.proyecto_ecommerce.accesoDatos
 
-import com.ejercicio.proyecto_ecommerce.tablas.Producto
-import com.ejercicio.proyecto_ecommerce.tablas.Vendedor
+import com.ejercicio.proyecto_ecommerce.negocio.Producto
 
 interface ProductoDAO {
     fun getNombreDescripcion(): List<Producto>

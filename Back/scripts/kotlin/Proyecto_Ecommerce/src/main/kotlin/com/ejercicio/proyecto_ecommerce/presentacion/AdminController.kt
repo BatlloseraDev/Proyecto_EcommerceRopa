@@ -1,15 +1,13 @@
-package com.ejercicio.proyecto_ecommerce
+package com.ejercicio.proyecto_ecommerce.presentacion
 
-import com.ejercicio.proyecto_ecommerce.AccesoDatos.UsuarioDAOImpl
-import com.ejercicio.proyecto_ecommerce.tablas.Usuario
-import javafx.application.Platform
+import com.ejercicio.proyecto_ecommerce.accesoDatos.UsuarioDAOImpl
+import com.ejercicio.proyecto_ecommerce.negocio.Usuario
 import javafx.collections.FXCollections
 import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.fxml.Initializable
 import javafx.scene.Node
 import javafx.scene.control.ComboBox
-import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import javafx.stage.Stage
 import java.net.URL

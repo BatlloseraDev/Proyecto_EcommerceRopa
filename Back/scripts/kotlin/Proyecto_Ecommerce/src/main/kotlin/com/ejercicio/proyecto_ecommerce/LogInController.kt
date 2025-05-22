@@ -4,8 +4,11 @@ import javafx.event.ActionEvent
 import javafx.fxml.FXML
 import javafx.scene.control.PasswordField
 import javafx.scene.control.TextField
-import com.ejercicio.proyecto_ecommerce.AccesoDatos.*
-import com.ejercicio.proyecto_ecommerce.tablas.Usuario
+import com.ejercicio.proyecto_ecommerce.accesoDatos.*
+import com.ejercicio.proyecto_ecommerce.negocio.Usuario
+import com.ejercicio.proyecto_ecommerce.presentacion.AdminController
+import com.ejercicio.proyecto_ecommerce.presentacion.ClienteController
+import com.ejercicio.proyecto_ecommerce.presentacion.VendedorController
 import javafx.fxml.FXMLLoader
 import javafx.scene.Parent
 import javafx.scene.Scene
@@ -85,7 +88,7 @@ class LogInController {
                 //cargar ventana cliente con los datos del cliente.
                 println("ventana cliente")
                 try {
-                    val loader = FXMLLoader(ClienteController::class.java.getResource("Cliente_View.fxml"))
+                    val loader = FXMLLoader(ClienteController::class.java.getResource("/com/ejercicio/proyecto_ecommerce/Cliente_View.fxml"))
                     val root: Parent = loader.load()
                     val stage = Stage()
                     stage.title = "Cliente"
@@ -105,7 +108,7 @@ class LogInController {
                     val loader =
                         FXMLLoader(
                             VendedorController::class.java.getResource
-                                ("Vendedor_View.fxml")
+                                ("/com/ejercicio/proyecto_ecommerce/Vendedor_View.fxml")
                         )
                     val root: Parent = loader.load()
                     val stage = Stage()
@@ -124,7 +127,7 @@ class LogInController {
                     val loader =
                         FXMLLoader(
                             AdminController::class.java.getResource
-                                ("Admin_View.fxml")
+                                ("/com/ejercicio/proyecto_ecommerce/Admin_View.fxml")
                         )
                     val root: Parent = loader.load()
                     val stage = Stage()
@@ -143,6 +146,22 @@ class LogInController {
 
     @FXML
     fun onBtnRegistrarme(event: ActionEvent) {
-        //cambiar a la ventana de registro
+        println("ventana administrador")
+
+        try {
+            val loader =
+                FXMLLoader(
+                    AdminController::class.java.getResource
+                        ("/com/ejercicio/proyecto_ecommerce/Register_View.fxml")
+                )
+            val root: Parent = loader.load()
+            val stage = Stage()
+            stage.title = "Registro"
+            stage.scene = Scene(root)
+            stage.show()
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+
     }
 }

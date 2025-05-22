@@ -1,4 +1,4 @@
-package com.ejercicio.proyecto_ecommerce.tablas
+package com.ejercicio.proyecto_ecommerce.negocio
 
 class Cliente(val id_usuario: Int, val nombreCliente:String, val ape1:String, val ape2:String?,val dni:String, val direccion:String, val telefono:String,val tarjeta: String ) {
 

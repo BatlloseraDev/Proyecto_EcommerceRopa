@@ -1,7 +1,7 @@
-package com.ejercicio.proyecto_ecommerce.AccesoDatos
+package com.ejercicio.proyecto_ecommerce.accesoDatos
 
-import com.ejercicio.proyecto_ecommerce.Utilidades.*
-import com.ejercicio.proyecto_ecommerce.tablas.Vendedor
+import com.ejercicio.proyecto_ecommerce.utilidades.*
+import com.ejercicio.proyecto_ecommerce.negocio.Vendedor
 
 class VendedorDAOImpl: VendedorDAO {
     private val conexion = ConexionDB()

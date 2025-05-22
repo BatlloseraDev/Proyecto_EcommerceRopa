@@ -1,7 +1,7 @@
-package com.ejercicio.proyecto_ecommerce.AccesoDatos
+package com.ejercicio.proyecto_ecommerce.accesoDatos
 
-import com.ejercicio.proyecto_ecommerce.tablas.Cliente
-import com.ejercicio.proyecto_ecommerce.Utilidades.*
+import com.ejercicio.proyecto_ecommerce.negocio.Cliente
+import com.ejercicio.proyecto_ecommerce.utilidades.*
 
 
 class ClienteDAOImpl: ClienteDAO {
